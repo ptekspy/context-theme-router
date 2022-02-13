@@ -1,5 +1,5 @@
 import React from 'react';
-// import './Home.css';
+import './About.css';
 import { useTheme, Theme } from '../../ThemeContext';
 import { Link } from "react-router-dom";
 
@@ -7,17 +7,17 @@ export default function About() {
   const { theme, setTheme } = useTheme();
   return (
     <>
+      <nav>
+        <Link to="/">Home</Link>
+      </nav>
       <main>
-        <h2>Who are we?</h2>
+        <h2>About page clicked</h2>
         <p>
-          That feels like an existential question, don't you
-          think?
+          You can set dark and light mode icon (stles don't adjust yet) and verify state is changed (the ocon adjusts).
+          If you refresh the page you can verify that local storage is being used to persist
         </p>
-        <p>
-          Well, you can set dark and light mode and see state here too
-        </p>
-        <div>
-          <span>{theme === 'Dark' ? "🌙" : "🌞"}</span>
+        <div className="mode-setting">
+            <span>{theme === 'Dark' ? "🌙" : "🌞"}</span>
             <button onClick={() => {
               if(theme === 'Dark'){
                 setTheme(Theme.Light)
@@ -29,9 +29,6 @@ export default function About() {
           </button>
         </div>
       </main>
-      <nav>
-        <Link to="/">Home</Link>
-      </nav>
     </>
   );
 }

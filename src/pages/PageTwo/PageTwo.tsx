@@ -1,9 +1,7 @@
 import * as React from 'react';
-import { useTheme, Theme } from './ThemeContext';
-import MyPage2 from './MyPage2';
+import { useTheme, Theme } from '../../ThemeContext';
 
-
-const MyPage = () => {
+const MyPage2 = () => {
   const { theme, setTheme } = useTheme();
   console.log(theme);
 
@@ -16,15 +14,18 @@ const MyPage = () => {
         }else{
           setTheme(Theme.Dark)
         }
+
       }}>
         switch to dark theme {theme}
       </button>
-        my page
-        <div>
-          <MyPage2 />
-        </div>
+        <p>my page 2 is called nested from page 1 but not recursive</p>
+        <p>
+          just page 2 p elements with text and the copy paste item
+          see if styles transcend from higher level components
+          and if they dont; make them
+        </p>
       </div>
   )
 }
 
-export default MyPage;
+export default MyPage2;

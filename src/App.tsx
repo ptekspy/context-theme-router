@@ -2,25 +2,28 @@ import * as React from 'react';
 import './App.css';
 import { Routes, Route, Link } from "react-router-dom";
 import { ThemeContext, Theme } from './ThemeContext';
-import MyPage from './MyPage';
+import { useLocalStorage } from "./hooks/useLocalStorage"
+import PageOne from './pages/PageOne/PageOne';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import ReactDOM from 'react-dom';
 
 function App() {
-  const [theme, setTheme] = React.useState(Theme.Light);
+  const [theme, setTheme] = useLocalStorage("storeTheme",Theme.Light);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className="App">
-        <header className="App-header">
+        <header className={`App-header-${theme.toString().toLowerCase()}`}>
           <>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="about" element={<About />} />
-            </Routes>
+            <div className="routes-container">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="about" element={<About />} />
+              </Routes>
+            </div>
             <div className="page">
-              <MyPage />
+              <PageOne />
             </div>
           </>
         </header>
