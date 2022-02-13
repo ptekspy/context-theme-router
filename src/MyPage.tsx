@@ -9,13 +9,13 @@ const MyPage = () => {
 
   return (
     <div>
+      <span>{theme === 'Dark' ? "🌙" : "🌞"}</span>
       <button onClick={() => {
         if(theme === 'Dark'){
           setTheme(Theme.Light)
         }else{
           setTheme(Theme.Dark)
         }
-
       }}>
         switch to dark theme {theme}
       </button>

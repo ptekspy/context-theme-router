@@ -15,11 +15,13 @@ function App() {
       <div className="App">
         <header className="App-header">
           <>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="about" element={<About />} />
-          </Routes>
-          <MyPage />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="about" element={<About />} />
+            </Routes>
+            <div className="page">
+              <MyPage />
+            </div>
           </>
         </header>
       </div>
