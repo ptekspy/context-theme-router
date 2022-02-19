@@ -5,6 +5,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
   // Pass initial state function to useState so logic is only executed once
   const [storedValue, setStoredValue] = useState<T>(() => {
     if (typeof window === "undefined") {
+      console.log(`typeof window === undefined triggered`)
       return initialValue;
     }
     try {
@@ -14,7 +15,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
       // If error also return initialValue
-      console.log(error);
+      console.log(`my other error ${error}`);
       return initialValue;
     }
   });
@@ -33,7 +34,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       }
     } catch (error) {
       // A more advanced implementation would handle the error case
-      console.log(error);
+      console.log(`myerror ${error}`);
     }
   };
   return [storedValue, setValue] as const;

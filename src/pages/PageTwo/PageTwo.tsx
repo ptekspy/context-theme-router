@@ -3,7 +3,7 @@ import { useTheme, Theme } from '../../ThemeContext';
 
 const MyPage2 = () => {
   const { theme, setTheme } = useTheme();
-  console.log(theme);
+  console.log(`page two rendering ${theme}`);
 
   return (
     <div>

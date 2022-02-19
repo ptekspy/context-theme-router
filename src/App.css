@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  overflow-wrap: break-word;
 }
 
 .App-logo {
@@ -18,8 +18,6 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(5px + 2vmin);
   color: white;
 }
@@ -29,8 +27,6 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(5px + 2vmin);
   color: white;
 }
@@ -40,8 +36,6 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(5px + 2vmin);
   color: white;
 }
@@ -50,10 +44,26 @@
   color: #61dafb;
 }
 
-.page {
+nav {
+  display: inline-flex;
+  border: 1px solid red;
+}
+
+.Nav-light {
+  display:inline;
+  padding:5px 12px;
+}
+
+.Nav-dark {
+  display:inline;
+  padding:5px 12px;
+}
+
+.header-page-container {
   border: 1px solid blue;
   border-radius: 20px;
-  padding: 50px;
+  padding: 5%;
+  margin: 2%;
 }
 
 .page-wrapper {
@@ -63,12 +73,16 @@
   margin:20px;
 }
 
-.routes-container {
+.header-route-container {
   height:300px;
   width: 100%;
   background-color: #5c85d6;
   padding:30px;
   margin-bottom: 30px;
+}
+
+.Body-wrap {
+  padding: 5%;
 }
 
 @keyframes App-logo-spin {
