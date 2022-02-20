@@ -1,7 +1,8 @@
 .mode-setting {
-  border: 1px solid black;
+  border: 0.4px solid #436184;
+  border-bottom-color: #6D96C5;
   border-radius: 18px;
-  height: 28px;
+  height: 26px;
   width: 50px;
   padding: 2px;
   margin: 5px;
@@ -13,19 +14,23 @@
 
 .mode-setting:hover {
   border: 1px solid #4C5E6A;
+  border-bottom-color: #78A5D8;
   cursor:pointer;
   box-shadow: inset 4px 4px 5px #4C5E6A;
   background-color: rbga(177, 210, 232, 0.4);
 }
 
 .mode-setting span {
-  font-size: 0.8em;
+  font-size: 16px;
+  height: 23px;
+  width: 23px;
 }
 
 .circle-switch {
-  border: 0.5px solid #CCCCCC;
+  border: 0.5px solid #79A3D2;
   border-radius: 50px;
   box-shadow: 0 7.5px 4px 4px rgba(0,0,0,0.36);
+  background-color: rgba(159, 200, 244, 0.7)
 }
 
 .circle-switch-hover {
