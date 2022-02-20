@@ -8,12 +8,29 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  box-shadow: inset 3px 3px 4px #000;
 }
 
 .mode-setting:hover {
+  border: 1px solid #4C5E6A;
   cursor:pointer;
+  box-shadow: inset 4px 4px 5px #4C5E6A;
+  background-color: rbga(177, 210, 232, 0.4);
 }
 
 .mode-setting span {
   font-size: 0.8em;
+}
+
+.circle-switch {
+  border: 0.5px solid #CCCCCC;
+  border-radius: 50px;
+  box-shadow: 0 7.5px 4px 4px rgba(0,0,0,0.36);
+}
+
+.circle-switch-hover {
+  border: 0.5px solid #7AA3BD;
+  background-color:#CCCCCC;
+  border-radius: 50px;
+  box-shadow: 0 7.5px 4px 4px rgba(0,0,0,0.36);
 }
