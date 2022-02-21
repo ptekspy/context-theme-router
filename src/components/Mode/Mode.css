@@ -1,19 +1,45 @@
 .mode-setting {
-  border: 1px solid black;
+  border: 0.4px solid #436184;
+  border-bottom-color: rgba(169, 182, 197, 0.5);
   border-radius: 18px;
-  height: 28px;
-  width: 50px;
+  height: 24px;
+  width: 30px;
   padding: 2px;
   margin: 5px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  box-shadow: inset 3px 3px 4px #353739;
 }
 
 .mode-setting:hover {
+  border: 1px solid #4C5E6A;
+  border-bottom-color: #6D96C5;
   cursor:pointer;
+  box-shadow: inset 3px 2px 3px #4C5E6A;
+  background-color: rbga(177, 210, 232, 0.4);
 }
 
 .mode-setting span {
-  font-size: 0.8em;
+  font-size: 18px;
+  height: 24px;
+  width: 24px;
+}
+
+.empty {
+  width: 10px;
+}
+
+.circle-switch {
+  border: 0.5px solid #A1C4EC;
+  border-radius: 50px;
+  box-shadow: 0 4.5px 3px 3px rgba(0,0,0,0.36);
+  background-color: rgba(159, 200, 244, 0.7)
+}
+
+.circle-switch-hover {
+  border: 0.5px solid #A1C4EC;
+  background-color:#CCCCCC;
+  border-radius: 50px;
+  box-shadow: 0 3.5px 1px 1px rgba(0,0,0,0.36);
 }

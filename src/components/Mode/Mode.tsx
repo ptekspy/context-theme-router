@@ -15,9 +15,9 @@ export default function Mode() {
             }
           }}>
             {theme === 'Dark'?
-              (<><span> </span><span>🌙</span></>)
+              (<><span className="empty"></span><span className="circle-switch">🌙</span></>)
             :
-              (<><span>🌞</span><span> </span></>)
+              (<><span className="circle-switch">🌞</span><span className="empty"></span></>)
             }
         </span>
   );

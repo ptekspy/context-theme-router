@@ -14,7 +14,6 @@ const MyPage2 = () => {
         }else{
           setTheme(Theme.Dark)
         }
-
       }}>
         switch to dark theme {theme}
       </button>
