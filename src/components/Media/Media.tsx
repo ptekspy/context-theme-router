@@ -39,6 +39,7 @@ export default function Media(props:any) {
                       className="video-media"
                       src={content}
                       autoPlay
+                      muted
                       controls
                       loop
                       />
