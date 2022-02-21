@@ -8,22 +8,15 @@ export default function Media(props:any) {
   const [contentType, setContentType] = useState('none')
 
   useEffect(() => {
-    console.log(`called dynamic media function ${contentType}`)
-    // const myUrl=`https://ipfs.io/ipfs/QmWJ3HnbLKm3WM2rkjugbUJ1tNj5iWLb8ZbUJUw5GkhWmJ`
-    // const myUrl=`https://ipfs.io/ipfs/QmcNtgAdi9fnHWHQa5QxWLFtRYNuyiHCe8VJyYXxLm55HX`
     if(isLoading === true){
       fetch(props.url).then(response => response.blob()).then(async blob => {
         console.log(`here`)
-        if(blob.type === 'image/gif'){
-          console.log(blob);
+        if(blob.type.split("/")[0] === 'image'){
           let url = URL.createObjectURL(blob);
-          console.log(url)
           setContentType('image');
           setContent(url);
-        }else if(blob.type === 'video/mp4'){
-          console.log(blob);
+        }else if(blob.type.split("/")[0] === 'video'){
           let url = URL.createObjectURL(blob);
-          console.log(url)
           setContentType('video');
           setContent(url);
         }else{
@@ -32,9 +25,6 @@ export default function Media(props:any) {
       });
       setIsLoading(false);
     }
-
-
-    //await console.log(contentSpecific)
   })
 
   return (
@@ -42,10 +32,17 @@ export default function Media(props:any) {
           <div className="media-viewer">
             <div>
                 {(contentType === 'image')?
-                  <img width="400" src={content} />
+                  <img className="image-media" src={content} />
                   :
                     (contentType === 'video')?
-                    <video width="400" src={content} />
+                    <video
+                      className="video-media"
+                      src={content}
+                      autoPlay
+                      muted
+                      controls
+                      loop
+                      />
                     :
                     <span>nothing</span>
                 }
