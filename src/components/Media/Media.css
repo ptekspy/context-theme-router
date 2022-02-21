@@ -3,3 +3,15 @@
   border: 1px solid #CCCCCC;
   border-radius:25px;
 }
+
+.image-media {
+  max-width:400px;
+  height:auto;
+  max-height:400px;
+}
+
+.video-media {
+  max-width:400px;
+  height:auto;
+  max-height:400px;
+}
