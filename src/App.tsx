@@ -7,7 +7,6 @@ import Mode from './components/Mode/Mode';
 import PageOne from './pages/PageOne/PageOne';
 import Home from './components/Home/Home';
 import About from './components/About/About';
-import ReactDOM from 'react-dom';
 
 function App() {
   const [theme, setTheme] = useLocalStorage("storeTheme",Theme.Light);

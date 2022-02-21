@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './PageOne.css';
-import { useTheme, Theme } from '../../ThemeContext';
+import { useTheme } from '../../ThemeContext';
 import PageTwo from '../../pages/PageTwo/PageTwo'; // nested component
 import Media from '../../components/Media/Media';
 import Mode from '../../components/Mode/Mode';
