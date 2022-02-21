@@ -2,6 +2,7 @@ import * as React from 'react';
 import './PageOne.css';
 import { useTheme, Theme } from '../../ThemeContext';
 import PageTwo from '../../pages/PageTwo/PageTwo'; // nested component
+import Media from '../../components/Media/Media';
 
 const PageOne = () => {
   const { theme, setTheme } = useTheme();
@@ -20,8 +21,8 @@ const PageOne = () => {
             switch to dark theme {theme}
           </button>
             <div className={`p1p-wrap-${theme.toString().toLowerCase()}`}>
+              <Media />
               <p>Page One needs some style</p>
-              <p>Page Two is called MyPage2 still</p>
               <p>PageTwo is the component 👇</p>
             </div>
             <div className="page-wrapper">
